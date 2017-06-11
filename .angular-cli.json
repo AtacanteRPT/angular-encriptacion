@@ -21,18 +21,28 @@
       "styles": [
         "styles.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "assets/js/jsbn.js",
+        "assets/js/jsbn2.js",
+        "assets/js/prng4.js",
+        "assets/js/rng.js",
+        "assets/js/rsa.js",
+        "assets/js/rsa2.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
       }
+
     }
+
   ],
   "e2e": {
     "protractor": {
       "config": "./protractor.conf.js"
     }
+
   },
   "lint": [
     {
@@ -44,14 +54,18 @@
     {
       "project": "e2e/tsconfig.e2e.json"
     }
+
   ],
   "test": {
     "karma": {
       "config": "./karma.conf.js"
     }
+
   },
   "defaults": {
     "styleExt": "css",
     "component": {}
+
   }
+
 }
