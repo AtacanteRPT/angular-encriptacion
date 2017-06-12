@@ -1,28 +1,32 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 
-import {GeneralService} from '../general.service'
+import { GeneralService } from '../general.service'
 @Component({
   selector: 'app-encriptacion',
   templateUrl: './encriptacion.component.html',
   styleUrls: ['./encriptacion.component.css']
 })
 export class EncriptacionComponent implements OnInit {
- public keyEncriptado: string='ALEXJKJKJKLJKLJ'
+  public keyEncriptado: string = ''
 
-  constructor(private generalService : GeneralService , private el: ElementRef) { }
+  constructor(private generalService: GeneralService, private el: ElementRef) { }
 
   ngOnInit() {
     this.generalService.cargarScript();
 
   }
 
-  cambio(e : any){
-console.log("Cambio : "+ e)
+  cambio(e) {
+    this.keyEncriptado = e;
+    console.log("Cambio : " + e)
   }
 
-  mostrarDatos(){
+  mostrarDatos() {
 
-    console.log("encriptacion : " + this.keyEncriptado)
+    let lis = this.el.nativeElement.getElementsByClassName("area1");
+        console.log("encriptacion : " + lis.area1.value)
+
+    console.dir(lis)
 
   }
 
